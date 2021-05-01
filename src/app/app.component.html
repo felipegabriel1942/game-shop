@@ -1,0 +1,19 @@
+<header class="main-header">
+  <div>
+    <img src="../assets/images/logo-1.png" height="50" />
+    <a href="#" class="main-header__brand">Game<span>$</span>hop</a>
+  </div>
+</header>
+
+<main class="content">
+  <section class="filters">
+    <select [(ngModel)]="filterOptionSelected" (change)="onFilterChange()">
+      <option *ngFor="let option of filterOptions">{{ option }}</option>
+    </select>
+  </section>
+  <section>
+    <ng-container *ngFor="let product of products">
+      <app-product-card [product]="product"></app-product-card>
+    </ng-container>
+  </section>
+</main>
