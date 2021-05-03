@@ -1,0 +1,28 @@
+.main-header {
+  width: 100%;
+  background-color: blueviolet;
+  padding: 9px 15px;
+  position: fixed;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.137);
+  z-index: 2;
+}
+
+.main-header > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main-header__brand {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 15px;
+  padding-left: 15px;
+  font-size: 20px;
+}
+
+.main-header__brand > span {
+  color: gold;
+  font-weight: bold;
+}

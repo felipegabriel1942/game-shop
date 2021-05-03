@@ -12,11 +12,19 @@ export class AppComponent implements OnInit {
   filterOptions = Object.values(FilterOptions);
   filterOptionSelected = FilterOptions.MaisVendidos;
   products: Product[] = [];
+  carouselImages: string[] = [];
 
   constructor(private service: AppService) {}
 
   ngOnInit(): void {
+    this.getCarouselImages();
     this.getProducts();
+  }
+
+  getCarouselImages(): void {
+    this.service.getCarouselImages().subscribe((res) => {
+      this.carouselImages = res;
+    });
   }
 
   getProducts(): void {

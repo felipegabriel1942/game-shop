@@ -1,39 +1,12 @@
-.main-header {
-  width: 100%;
-  background-color: blueviolet;
-  padding: 9px 15px;
-  position: fixed;
-  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.137);
-}
-
-.main-header > div {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.main-header__brand {
-  text-decoration: none;
-  color: white;
-  display: inline-block;
-  vertical-align: top;
-  padding-top: 15px;
-  padding-left: 15px;
-  font-size: 20px;
-}
-
-.main-header__brand > span {
-  color: gold;
-  font-weight: bold;
-}
-
 .content {
   margin-left: auto;
   margin-right: auto;
   display: block;
   width: 80%;
   text-align: center;
-  background-color: white;
-  margin-top: 60px;
+  background-color: rgb(244, 242, 247);
+  margin-top: 20px;
+  padding-top: 50px;
   min-height: calc(100vh - 65px);
 }
 
@@ -47,3 +20,4 @@
   border-radius: 5px;
   width: 200px;
 }
+

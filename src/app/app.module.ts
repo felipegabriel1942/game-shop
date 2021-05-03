@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { FormsModule } from '@angular/forms';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    CarouselComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

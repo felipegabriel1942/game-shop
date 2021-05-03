@@ -143,7 +143,17 @@ export class AppService {
     // })
   ];
 
+  carouselImages = [
+    'https://i.zst.com.br/thumbs/12/1b/2d/36173618.jpg',
+    'https://images-americanas.b2w.io/produtos/01/00/img/44285/6/44285667_1GG.jpg',
+    'https://http2.mlstatic.com/D_NQ_NP_813569-MLA32731593369_112019-O.jpg',
+  ];
+
   getProducts(): Observable<Product[]> {
     return of([...this.products]);
+  }
+
+  getCarouselImages(): Observable<string[]> {
+    return of([...this.carouselImages]);
   }
 }

@@ -4,10 +4,10 @@
   height: 280px;
   margin: 10px 10px;
   padding: 20px 20px;
-  border-radius: 5px;
+  border-radius: 8px;
   display: inline-block;
   border: 1px solid rgb(236, 230, 230);
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 .card:hover {
