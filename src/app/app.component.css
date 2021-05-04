@@ -10,14 +10,3 @@
   min-height: calc(100vh - 65px);
 }
 
-.filters {
-  text-align: start;
-  padding: 2% 2%;
-}
-
-.filters > select {
-  height: 40px;
-  border-radius: 5px;
-  width: 200px;
-}
-

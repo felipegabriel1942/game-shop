@@ -1,18 +1,5 @@
 <app-header></app-header>
 
 <main class="content">
-  <section>
-    <app-carousel [images]="carouselImages"></app-carousel>
-  </section>
-  <section class="filters">
-    <select [(ngModel)]="filterOptionSelected" (change)="onFilterChange()">
-      <option *ngFor="let option of filterOptions">{{ option }}</option>
-    </select>
-  </section>
-
-  <section>
-    <ng-container *ngFor="let product of products">
-      <app-product-card [product]="product"></app-product-card>
-    </ng-container>
-  </section>
+  <router-outlet></router-outlet>
 </main>

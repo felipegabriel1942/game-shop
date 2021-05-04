@@ -1,0 +1,8 @@
+<div class="filters">
+  <select
+    [(ngModel)]="selectedOption"
+    (change)="onSelectOption.emit(selectedOption)"
+  >
+    <option *ngFor="let option of options">{{ option }}</option>
+  </select>
+</div>

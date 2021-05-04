@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from './app.service';
-import { FilterOptions } from './core/enum/filter-options.enum';
-import { Product } from './shared/models/product.model';
+import { AppService } from 'src/app/app.service';
+import { FilterOptions } from 'src/app/core/enum/filter-options.enum';
+import { Product } from 'src/app/shared/models/product.model';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css'],
 })
-export class AppComponent implements OnInit {
+export class HomeComponent implements OnInit {
   products: Product[] = [];
   carouselImages: string[] = [];
 

@@ -14,6 +14,7 @@ export class CarouselComponent implements OnInit {
 
   ngOnInit(): void {
     this.selectedImage = this.images[0];
+    this.changeCarouselImage();
   }
 
   changeCarouselImage(): void {
