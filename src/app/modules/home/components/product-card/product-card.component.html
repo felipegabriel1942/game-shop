@@ -5,5 +5,7 @@
 
   <p class="card__name">{{ product.name }}</p>
   <p class="card__price">R$ {{ product.price }}</p>
-  <button class="card__button">+ Detalhes</button>
+  <button class="card__button" (click)="onMoreDetailClicked.emit(this.product)">
+    + Detalhes
+  </button>
 </div>

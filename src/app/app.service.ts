@@ -130,12 +130,13 @@ export class AppService {
       name: 'Command & Conquer',
       price: 119.99,
       totalSales: 145,
-      description: 'Command & Conquer: Red Alert 3 é um videogame de estratégia em tempo real desenvolvido pela EA Los Angeles e publicado pela Electronic Arts. Foi lançado em outubro de 2008 nos Estados Unidos e na Europa para Microsoft Windows. Uma versão do Xbox 360 foi lançada em 11 de novembro.',
+      description:
+        'Command & Conquer: Red Alert 3 é um videogame de estratégia em tempo real desenvolvido pela EA Los Angeles e publicado pela Electronic Arts. Foi lançado em outubro de 2008 nos Estados Unidos e na Europa para Microsoft Windows. Uma versão do Xbox 360 foi lançada em 11 de novembro.',
       images: [
         'https://jogorama.com.br/arquivos/capas/2768.jpg',
         'https://cdn.cloudflare.steamstatic.com/steam/apps/17480/0000006511.1920x1080.jpg?t=1615390553',
-        'https://www.mobygames.com/images/promo/original/1534960296-764035686.jpg'
-      ]
+        'https://www.mobygames.com/images/promo/original/1534960296-764035686.jpg',
+      ],
     }),
     // new Product({
     //   id: 11,
@@ -151,6 +152,10 @@ export class AppService {
 
   getProducts(): Observable<Product[]> {
     return of([...this.products]);
+  }
+
+  getProductById(id: number): Observable<Product> {
+    return of([...this.products].filter((p) => (p.id === id))[0]);
   }
 
   getCarouselImages(): Observable<string[]> {

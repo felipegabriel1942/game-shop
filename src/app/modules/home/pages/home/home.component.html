@@ -6,6 +6,9 @@
 </section>
 <section>
   <ng-container *ngFor="let product of products">
-    <app-product-card [product]="product"></app-product-card>
+    <app-product-card
+      [product]="product"
+      (onMoreDetailClicked)="navigateToMoreDetail($event)"
+    ></app-product-card>
   </ng-container>
 </section>

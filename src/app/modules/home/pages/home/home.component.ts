@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AppService } from 'src/app/app.service';
 import { FilterOptions } from 'src/app/core/enum/filter-options.enum';
 import { Product } from 'src/app/shared/models/product.model';
@@ -12,7 +13,8 @@ export class HomeComponent implements OnInit {
   products: Product[] = [];
   carouselImages: string[] = [];
 
-  constructor(private service: AppService) {}
+  constructor(private service: AppService,
+              private router: Router) {}
 
   ngOnInit(): void {
     this.getCarouselImages();
@@ -96,5 +98,9 @@ export class HomeComponent implements OnInit {
     }
 
     return 0;
+  }
+
+  navigateToMoreDetail(product: Product): void {
+    this.router.navigate(['/detalhes', product.id]);
   }
 }

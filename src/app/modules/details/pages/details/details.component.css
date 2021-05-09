@@ -1,0 +1,7 @@
+.thumbnail {
+  height: 90px;
+  width: 90px;
+  margin: 10px;
+  display: inline-block;
+  overflow: auto;
+}
