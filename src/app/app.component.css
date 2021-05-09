@@ -9,3 +9,9 @@
   text-align: center;
   background-color: rgb(244, 242, 247);
 }
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 90%;
+  }
+}
