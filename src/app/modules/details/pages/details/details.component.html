@@ -1,11 +1,45 @@
-<div style="display: flex">
-  <div style="width: 50%">
-    <img [src]="product.images[0]" style="display: flex; height: 400px" />
-    <div style="height: 100px; width: 100%; display: flex; flex-wrap: nowrap">
-      <img [src]="product.images[0]" class="thumbnail" />
-      <img [src]="product.images[1]" class="thumbnail" />
-      <img [src]="product.images[2]" class="thumbnail" />
+<div class="grid">
+  <div class="images">
+    <img [src]="imgSelected" class="images__main" />
+    <div class="image-grid">
+      <ng-container *ngFor="let image of product.images">
+        <div class="img-container" (click)="changeMainImage(image)">
+          <img [src]="image" />
+        </div>
+      </ng-container>
     </div>
   </div>
-  <div style="width: 50%">PAGAR</div>
+  <div class="payment">
+    <div class="payment-grid">
+      <h2>{{ product.name }}</h2>
+      <div>
+        <p>
+          <span>R$ {{ product.price }},00</span> no boleto
+        </p>
+        <p>
+          até <b>5x de R$ {{ product.price / 5 }}</b> sem juros
+        </p>
+      </div>
+
+      <button class="shop-button">
+        <fa-icon [icon]="faShoppingCart"></fa-icon> COMPRAR
+      </button>
+      <div class="shipment">
+        <div>
+          <label class="shipment__label">CALCULE O FRETE</label>
+        </div>
+        <div>
+          <input
+            class="shipment__input"
+            placeholder="CEP"
+            maxlength="8"
+          /><button class="shipment__button">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="description">
+  <h2>Descrição</h2>
+  {{ product.description }}
 </div>
