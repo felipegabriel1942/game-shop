@@ -1,13 +1,14 @@
 .card {
   padding: 20px 20px;
   border-radius: 8px;
-  border: 1px solid rgb(236, 230, 230);
   background-color: white;
+  border: 1px solid rgba(128, 128, 128, 0);
+  box-shadow: 3px 3px 10px rgba(36, 36, 36, 0.137);
 }
 
 .card:hover {
-  box-shadow: 3px 1px 10px rgba(36, 36, 36, 0.137);
-  transition: box-shadow 0.1s ease-in;
+  border: 1px solid rgb(158, 50, 158);
+  transition: border 0.3s ease-in;
 }
 
 .card__img {
@@ -21,7 +22,7 @@
   font-size: 23px;
   font-weight: bold;
   text-align: center;
-  color: rgb(78, 78, 247);
+  color: rgb(238, 189, 56);
   margin: 20px 10px;
 }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { AppService } from 'src/app/app.service';
 import { Product } from 'src/app/shared/models/product.model';
 
@@ -10,6 +11,8 @@ import { Product } from 'src/app/shared/models/product.model';
 })
 export class DetailsComponent implements OnInit {
   product: Product;
+  imgSelected: string;
+  faShoppingCart = faShoppingCart;
 
   constructor(private appService: AppService, private route: ActivatedRoute) {}
 
@@ -18,6 +21,11 @@ export class DetailsComponent implements OnInit {
 
     this.appService.getProductById(id).subscribe((res) => {
       this.product = res;
+      this.imgSelected = res.images[0];
     });
+  }
+
+  changeMainImage(image: string): void {
+    this.imgSelected = image;
   }
 }

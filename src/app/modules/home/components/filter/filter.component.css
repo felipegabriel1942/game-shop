@@ -7,6 +7,9 @@
   height: 40px;
   border-radius: 5px;
   width: 200px;
+  border: none;
+  box-shadow: 5px 5px 10px rgba(36, 36, 36, 0.137);
+  outline: none;
 }
 
 @media (max-width: 600px) {

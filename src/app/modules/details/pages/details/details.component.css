@@ -1,7 +1,143 @@
-.thumbnail {
-  height: 90px;
-  width: 90px;
+.grid {
+  display: grid;
+  padding-top: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(50%, auto));
+  background: white;
+}
+
+.images {
+  background: white;
   margin: 10px;
-  display: inline-block;
-  overflow: auto;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 75px 75px 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.images__main {
+  height: 400px;
+  max-width: 300px;
+}
+
+.img-container {
+  padding: 10px;
+  background: white;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.payment {
+  margin: 10px;
+  padding: 40px 0;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(36, 36, 36, 0.137);
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-rows: 50px 100px 100px 120px;
+}
+
+h2 {
+  color: mediumpurple;
+}
+
+p {
+  margin: 10px 0px;
+}
+
+b {
+  color: goldenrod;
+}
+
+span {
+  font-size: 30px;
+  font-weight: 900;
+  color: goldenrod;
+}
+
+.shop-button {
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(6, 155, 6);
+  border: 1px solid rgb(103, 196, 103);
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  font-size: 25px;
+  height: 50%;
+  font-weight: bold;
+}
+
+.shop-button:active {
+  background-color: green;
+}
+
+.shipment {
+  display: grid;
+  background: rgba(128, 0, 128, 0.116);
+  align-content: center;
+  justify-content: center;
+  margin: 0px 25px;
+  border-radius: 8px;
+}
+
+.shipment__label {
+  font-weight: bold;
+}
+
+.shipment__input {
+  margin-right: 10px;
+  margin-top: 10px;
+  border: none;
+  height: 40px;
+  border-radius: 2px;
+  outline: none;
+  font-size: 18px;
+  padding-left: 10px;
+  width: 150px;
+}
+
+.shipment__button {
+  padding: 10px;
+  background: rgb(163, 163, 214);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.shipment__button:active {
+  background-color: purple;
+}
+
+.description {
+  text-align: justify;
+  padding: 25px;
+  background-color: white;
+}
+
+.description > h2 {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(100%, auto));
+  }
 }
